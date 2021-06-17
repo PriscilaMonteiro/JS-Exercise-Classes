@@ -264,6 +264,51 @@ priscila.poop();console.log('alexander after' , alexander.stomach);
 
      }
  }
+ const jonny = new Lambdasian({
+  name: 'John', 
+  age: 20, 
+  location:'Colorado'
+});
+const britt = new Instructor({
+  name: 'Brit Hemming', 
+  age: 22, 
+  location:'Canada',
+  specialty : 'redux',
+  favLanguage: 'JavaScript, Python, Elm etc.',
+  catchPhrase: `Don't forget the homies`
+});
+const pri = new Student({
+  name: 'Priscila Monteiro',
+  age: 42,
+  location: 'San Diego -CA',
+  previousBackground: 'Nurse Assistant',
+  favSubjects: ['Html','CSS', 'Javascript']
+});
+
+const anna = new ProjectManager ({
+  name: 'Anna Joe', 
+  age: 30, 
+  location:'San Francisco',
+  specialty : 'redux',
+  favLanguage: 'JavaScript, Python, Elm etc.',
+  catchPhrase: `Don't forget the homies`,
+  gradClassName: 'CS1',
+  favInstructor: 'Sean'
+});
+
+const subjects = ['Html','Javascript','CSS'];
+const channel = ['web45','web45_help','announcements'];
+
+console.log(jonny.name);
+console.log(jonny.speak());
+console.log(`Priscila's previous background`, pri.previousBackground);
+// console.log(pri.favSubjects);
+console.log(pri.PRAssignment(subjects[0]));
+// console.log(pri.listSubjects(this.favSubjects));
+console.log(anna.debugsCode(pri, subjects[0]));
+console.log(anna.standUp(channel[1]));
+console.log(pri.sprintChallenge(subjects[2]));
+
   /*
     STRETCH PROBLEM (no tests!)
       - Extend the functionality of the Student by adding a prop called grade and setting it equal to a number between 1-100.
