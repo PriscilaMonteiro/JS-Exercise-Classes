@@ -107,30 +107,43 @@ priscila.poop();console.log('alexander after' , alexander.stomach);
      
    }
    fill(gallons){
-     this.tank = this.tank += gallons;
+     this.tank += gallons;
    }
 
    drive(distance){
-     const distanceDriven = this.tank * this.milesPerGallon;
-     if(distance <= distanceDriven){
-       this.odometer = this.odometer + distance;
-       this.tank = this.tank - (distance/this.milesPerGallon);
-     } else {
-       this.odometer = this.odometer + distanceDriven;
-       this.tank = 0;
-       return `I ran out of fuel at ${this.odometer}miles!`
+    const distanceDrivable = this.tank * this.milesPerGallon;
+    if(distance <= distanceDrivable){
+      this.odometer += distance;
+      this.tank -= (distance/this.milesPerGallon);
+    } else {
+      this.odometer += distanceDrivable;
+      this.tank = 0;
+      return `I ran out of fuel at ${this.odometer} miles!`
      }
-    }
-  }
-  
-  const a3 = new Car ('2019A3', 29);
-  const a5 = new Car ('2019A5', 27);
-  const s3 = new Car ('2019S3', 25);
-  const q5 = new Car ('2019Q5', 24);
-  console.log (a3);
-  console.log (a5);
-  console.log (s3);
-  console.log (q5);
+   }
+ }
+ 
+
+ const a3 = new Car ('2019A3', 29);
+ const a5 = new Car ('2019A5', 27);
+ const s3 = new Car ('2019S3', 25);
+ const q5 = new Car ('2019Q5', 24);
+
+
+ a3.fill(200);
+ console.log(a3.tank);
+
+ a3.drive(100);
+ console.log(a3.tank);
+
+ console.log(a3.drive(100000));
+ console.log(a3.tank);
+
+
+ // console.log (a3);
+ // console.log (a5);
+ // console.log (s3);
+ // console.log (q5);
 
 
   /*
@@ -181,7 +194,7 @@ priscila.poop();console.log('alexander after' , alexander.stomach);
      return `Today we are learning about ${subject}`;
    }
    grade(student, subject){
-    return `${student} receives a perfect score on ${subject}`;
+    return `${student.name} receives a perfect score on ${subject}`;
    }
 
  }
@@ -247,7 +260,7 @@ priscila.poop();console.log('alexander after' , alexander.stomach);
        return `${this.name} announces to ${channel}, @channel standy times!`;
      }
      debugsCode(student,subject){
-       return `${this.name} debugs ${student}'s code on ${subject}`;
+       return `${this.name} debugs ${student.name}'s code on ${subject}`;
 
      }
  }
