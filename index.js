@@ -221,7 +221,7 @@ priscila.poop();console.log('alexander after' , alexander.stomach);
      this.favSubjects = attributes.favSubjects;
    }
    listSubjects(){
-     return this.favSubjects;
+    return `Loving ${this.favSubjects}!`;
 
 
    }
